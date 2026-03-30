@@ -971,3 +971,11 @@
   .hero-right img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; }
 }
 </style>
+<style>
+@media (max-width: 900px) {
+  .hero { display: flex !important; flex-direction: column !important; }
+  .hero-left { order: 1 !important; border-bottom: 1px solid #e8e8e8 !important; }
+  .hero-right { order: 2 !important; height: 380px !important; position: relative !important; overflow: hidden !important; flex-shrink: 0 !important; }
+  .hero-right img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center !important; }
+}
+</style>
