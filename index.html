@@ -648,7 +648,7 @@
       .topbar-phone { display: none; }
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 60px 20px 48px; border-right: none; border-bottom: 1px solid var(--border); }
-      .hero-right { height: 300px; }
+      .hero-right { height: 280px; position: relative; overflow: hidden; }
       .services { padding: 64px 20px; }
       .services-header { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
       .services-list { grid-template-columns: 1fr; }
@@ -969,21 +969,5 @@
 @media (max-width: 900px) {
   .hero-right { height: 280px !important; position: relative !important; overflow: hidden !important; }
   .hero-right img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; }
-}
-</style>
-<style>
-@media (max-width: 900px) {
-  .hero { display: flex !important; flex-direction: column !important; }
-  .hero-left { order: 1 !important; border-bottom: 1px solid #e8e8e8 !important; }
-  .hero-right { order: 2 !important; height: 380px !important; position: relative !important; overflow: hidden !important; flex-shrink: 0 !important; }
-  .hero-right img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center !important; }
-}
-</style>
-<style>
-@media (max-width: 900px) {
-  .hero { display: block !important; }
-  .hero-left { display: block !important; padding: 48px 20px !important; border-right: none !important; border-bottom: 1px solid #e8e8e8 !important; }
-  .hero-right { display: block !important; height: 360px !important; width: 100% !important; position: relative !important; overflow: hidden !important; }
-  .hero-right img { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; }
 }
 </style>
