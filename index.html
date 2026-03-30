@@ -971,3 +971,10 @@
   .hero-right img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; }
 }
 </style>
+<style>
+@media (max-width: 900px) {
+  .hero { display: flex !important; flex-direction: column !important; }
+  .hero-left { order: 1 !important; }
+  .hero-right { order: 2 !important; height: 260px !important; }
+}
+</style>
