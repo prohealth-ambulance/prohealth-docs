@@ -569,6 +569,14 @@
     body.lang-es [data-es].flex   { display: flex; }
     body.lang-en [data-en].flex   { display: flex; }
 
+    /* Garantizar visibilidad de títulos de sección en todos los tamaños */
+    body.lang-es .section-title[data-es],
+    body.lang-es .section-label[data-es],
+    body.lang-es .section-body[data-es] { display: block !important; }
+    body.lang-en .section-title[data-en],
+    body.lang-en .section-label[data-en],
+    body.lang-en .section-body[data-en] { display: block !important; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .topbar { padding: 0 20px; }
