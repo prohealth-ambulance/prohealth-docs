@@ -923,6 +923,8 @@
 <script>
   function setLang(lang) {
     document.body.className = 'lang-' + lang;
+    document.querySelectorAll('.sh-title-es,.sh-label-es,.sh-body-es').forEach(e=>e.style.display=lang==='es'?'block':'none');
+    document.querySelectorAll('.sh-title-en,.sh-label-en,.sh-body-en').forEach(e=>e.style.display=lang==='en'?'block':'none');
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     document.querySelector('.lang-btn[onclick*="' + lang + '"]').classList.add('active');
     document.documentElement.lang = lang;
