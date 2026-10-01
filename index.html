@@ -211,13 +211,28 @@
   gtag("js", new Date());
   gtag("config", "AW-10900640971");
 </script>
+
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-10900640971/PkhMCLLjiI0dEMup6s0o',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </head>
 <body class="lang-es">
 
 <header class="topbar">
   <div class="topbar-logo"><span>Pro</span>Health Ambulance</div>
   <div class="topbar-right">
-    <a href="tel:7872124700" class="topbar-phone">(787) 212-4700</a>
+    <a href="tel:7872124700" onclick="return gtag_report_conversion('tel:7872124700')" class="topbar-phone">(787) 212-4700</a>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('es')">ES</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -234,8 +249,8 @@
     <p class="hero-body es">Con unidades ALS y paramédicos certificados, atendemos a Puerto Rico con un servicio de ambulancia diseñado para emergencias críticas, traslados entre hospitales, transporte especializado y servicios programados, manteniendo siempre un estándar profesional y confiable.</p>
     <p class="hero-body en">With ALS units and certified paramedics, we serve Puerto Rico with an ambulance service designed for critical emergencies, hospital transfers, specialized transport, and scheduled services — always maintaining a professional and reliable standard.</p>
     <div class="hero-actions">
-      <a href="tel:7872124700" class="btn-call es">Llamar · (787) 212-4700</a>
-      <a href="tel:7872124700" class="btn-call en">Call · (787) 212-4700</a>
+      <a href="tel:7872124700" onclick="return gtag_report_conversion('tel:7872124700')" class="btn-call es">Llamar · (787) 212-4700</a>
+      <a href="tel:7872124700" onclick="return gtag_report_conversion('tel:7872124700')" class="btn-call en">Call · (787) 212-4700</a>
       <a href="#contacto" class="btn-contact es">Solicitar servicio por escrito →</a>
       <a href="#contacto" class="btn-contact en">Submit a service request →</a>
     </div>
@@ -268,7 +283,7 @@
     <div class="service-item"><div class="service-num">04</div><div class="service-name">Cobertura de eventos</div><div class="service-desc">Standby médico para eventos corporativos, deportivos y públicos.</div></div>
     <div class="service-item"><div class="service-num">05</div><div class="service-name">Evaluación de signos vitales</div><div class="service-desc">A domicilio o en instalaciones. Documentado y certificado.</div></div>
     <div class="service-item"><div class="service-num">06</div><div class="service-name">Room to room</div><div class="service-desc">Traslados entre habitaciones con equipo especializado, sin importar el espacio o las escaleras.</div></div>
-    <div class="service-item" style="border-right:none; grid-column: 1 / -1; padding-left:0;"><div class="service-icon" style="width:36px;height:3px;background:var(--orange);margin-bottom:20px;"></div><div class="service-name">Planes médicos y métodos de pago</div><div class="service-desc">Aceptamos la mayoría de los planes médicos de Puerto Rico y múltiples métodos de pago. Llame al <a href="tel:7872124700" style="color:#F07C1A;text-decoration:none;font-weight:500;">(787) 212-4700</a> para verificar su cobertura.</div></div>
+    <div class="service-item" style="border-right:none; grid-column: 1 / -1; padding-left:0;"><div class="service-icon" style="width:36px;height:3px;background:var(--orange);margin-bottom:20px;"></div><div class="service-name">Planes médicos y métodos de pago</div><div class="service-desc">Aceptamos la mayoría de los planes médicos de Puerto Rico y múltiples métodos de pago. Llame al <a href="tel:7872124700" onclick="return gtag_report_conversion('tel:7872124700')" style="color:#F07C1A;text-decoration:none;font-weight:500;">(787) 212-4700</a> para verificar su cobertura.</div></div>
   </div>
 
   <div class="services-list en">
@@ -278,7 +293,7 @@
     <div class="service-item"><div class="service-num">04</div><div class="service-name">Event Coverage</div><div class="service-desc">Medical standby for corporate, sports, and public events.</div></div>
     <div class="service-item"><div class="service-num">05</div><div class="service-name">Vital Signs Assessment</div><div class="service-desc">Home or facility visits. Documented and certified.</div></div>
     <div class="service-item"><div class="service-num">06</div><div class="service-name">Room to Room</div><div class="service-desc">Transfers between rooms with specialized equipment, regardless of space or stairs.</div></div>
-    <div class="service-item" style="border-right:none; grid-column: 1 / -1; padding-left:0;"><div class="service-icon" style="width:36px;height:3px;background:var(--orange);margin-bottom:20px;"></div><div class="service-name">Insurance &amp; Payment</div><div class="service-desc">We accept most medical insurance plans in Puerto Rico and multiple payment methods. Call <a href="tel:7872124700" style="color:#F07C1A;text-decoration:none;font-weight:500;">(787) 212-4700</a> to verify your coverage.</div></div>
+    <div class="service-item" style="border-right:none; grid-column: 1 / -1; padding-left:0;"><div class="service-icon" style="width:36px;height:3px;background:var(--orange);margin-bottom:20px;"></div><div class="service-name">Insurance &amp; Payment</div><div class="service-desc">We accept most medical insurance plans in Puerto Rico and multiple payment methods. Call <a href="tel:7872124700" onclick="return gtag_report_conversion('tel:7872124700')" style="color:#F07C1A;text-decoration:none;font-weight:500;">(787) 212-4700</a> to verify your coverage.</div></div>
   </div>
 </section>
 
@@ -303,7 +318,7 @@
         <div>
           <p class="contact-row-label es">Teléfono</p>
           <p class="contact-row-label en">Phone</p>
-          <p class="contact-row-val"><a href="tel:7872124700">(787) 212-4700</a><br><a href="tel:9392668686" style="color:var(--black);text-decoration:none">(939) 266-8686</a></p>
+          <p class="contact-row-val"><a href="tel:7872124700" onclick="return gtag_report_conversion('tel:7872124700')">(787) 212-4700</a><br><a href="tel:9392668686" style="color:var(--black);text-decoration:none">(939) 266-8686</a></p>
         </div>
         <div><p class="contact-row-label">Fax</p><p class="contact-row-val">1-314-897-4260</p></div>
         <div><p class="contact-row-label">Email</p><p class="contact-row-val"><a href="mailto:breyes@phambulancepr.com">breyes@phambulancepr.com</a></p></div>
