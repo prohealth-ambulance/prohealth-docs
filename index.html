@@ -491,19 +491,6 @@ function gtag_report_conversion(url) {
     }
   });
 
-  if (window.innerWidth > 900) {
-    document.querySelectorAll('.service-item').forEach(item => {
-      const num = item.querySelector('.service-num');
-      if (!num) return;
-      item.addEventListener('mousemove', e => {
-        const r = item.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        num.style.transform = 'translate(' + (x * 24) + 'px,' + (y * 16) + 'px) rotate(' + (x * 6) + 'deg)';
-      });
-      item.addEventListener('mouseleave', () => { num.style.transform = ''; });
-    });
-  }
 </script>
 </body>
 </html>
