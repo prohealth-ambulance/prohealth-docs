@@ -394,15 +394,25 @@ function gtag_report_conversion(url) {
           <div class="field"><label>Email</label><input type="email" name="email" required /></div>
           <div class="field">
             <label class="es">Tipo de servicio</label><label class="en">Service type</label>
-            <select name="service" required>
+            <select name="service" required class="svc-select-es">
               <option value="" disabled selected></option>
-              <option value="emergencia">Emergencia médica / Medical emergency</option>
-              <option value="traslado">Traslado médico / Medical transport</option>
-              <option value="psiquiatrico">Transporte psiquiátrico / Psychiatric transport</option>
-              <option value="evento">Cobertura de evento / Event coverage</option>
-              <option value="signos">Evaluación de signos vitales / Vital signs</option>
-              <option value="room">Room to room</option>
-              <option value="otro">Otro / Other</option>
+              <option value="emergencia">Emergencia médica</option>
+              <option value="traslado">Traslado médico</option>
+              <option value="psiquiatrico">Transporte psiquiátrico</option>
+              <option value="evento">Cobertura de evento</option>
+              <option value="signos">Evaluación de signos vitales</option>
+              <option value="room">De cuarto a cuarto</option>
+              <option value="otro">Otro</option>
+            </select>
+            <select name="service_en" class="svc-select-en" style="display:none">
+              <option value="" disabled selected></option>
+              <option value="emergency">Medical emergency</option>
+              <option value="transport">Medical transport</option>
+              <option value="psychiatric">Psychiatric transport</option>
+              <option value="event">Event coverage</option>
+              <option value="vitals">Vital signs</option>
+              <option value="room2">Room to room</option>
+              <option value="other">Other</option>
             </select>
           </div>
           <div class="field">
@@ -411,7 +421,8 @@ function gtag_report_conversion(url) {
           </div>
           <button type="submit" class="btn-submit es" id="submit-ph">Enviar solicitud</button>
           <button type="submit" class="btn-submit en" id="submit-ph-en">Send request</button>
-          <p class="recaptcha-note">Este sitio está protegido por reCAPTCHA · <a href="https://policies.google.com/privacy" target="_blank">Privacidad</a> · <a href="https://policies.google.com/terms" target="_blank">Términos</a></p>
+          <p class="recaptcha-note es">Este sitio está protegido por reCAPTCHA · <a href="https://policies.google.com/privacy" target="_blank">Privacidad</a> · <a href="https://policies.google.com/terms" target="_blank">Términos</a></p>
+          <p class="recaptcha-note en" style="display:none">This site is protected by reCAPTCHA · <a href="https://policies.google.com/privacy" target="_blank">Privacy</a> · <a href="https://policies.google.com/terms" target="_blank">Terms</a></p>
         </div>
       </form>
       <div class="form-success" id="form-success">
@@ -451,6 +462,19 @@ function gtag_report_conversion(url) {
       if (esSpan) esSpan.style.display = lang === 'es' ? 'block' : 'none';
       if (enSpan) enSpan.style.display = lang === 'en' ? 'block' : 'none';
     }
+    // Service select toggle
+    const selEs = document.querySelector('.svc-select-es');
+    const selEn = document.querySelector('.svc-select-en');
+    if (selEs && selEn) {
+      selEs.style.display = lang === 'es' ? 'block' : 'none';
+      selEn.style.display = lang === 'en' ? 'block' : 'none';
+      selEs.required = lang === 'es';
+      selEn.required = lang === 'en';
+    }
+    // reCAPTCHA note toggle
+    document.querySelectorAll('.recaptcha-note').forEach(el => {
+      el.style.display = el.classList.contains(lang) ? 'block' : 'none';
+    });
   }
 
   const form = document.getElementById('contact-form');
