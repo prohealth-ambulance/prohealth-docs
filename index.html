@@ -449,8 +449,9 @@ function gtag_report_conversion(url) {
 <script>
   const RECAPTCHA_SITE_KEY = '6LegoLwsAAAAJdOUtP4m15oGleCQnMo0rz1-6lu';
 
-  function setLang(lang) {
+  function setLang(lang, skipSave) {
     document.body.className = 'lang-' + lang;
+    if (!skipSave) { try { localStorage.setItem('ph_lang', lang); } catch(e) {} }
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     document.querySelector('.lang-btn[onclick*="' + lang + '"]').classList.add('active');
     document.documentElement.lang = lang;
@@ -509,6 +510,11 @@ function gtag_report_conversion(url) {
     }
   });
 
+
+  try {
+    const saved = localStorage.getItem('ph_lang');
+    if (saved === 'en') { setLang('en', true); }
+  } catch(e) {}
 </script>
 </body>
 </html>
