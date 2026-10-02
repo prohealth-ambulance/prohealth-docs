@@ -202,7 +202,24 @@
       .hero-eyebrow { font-size: 0.55rem; letter-spacing: 0.06em; }
       .section-label { font-size: 0.55rem; letter-spacing: 0.06em; }
     }
-  </style>
+  
+    .hero-left { position: relative; }
+    .hero-vertical {
+      position: absolute; left: 18px; top: 50%;
+      transform: translateY(-50%) rotate(-90deg); transform-origin: left center;
+      white-space: nowrap; font-size: 0.6rem; letter-spacing: .3em;
+      color: #bbb; text-transform: uppercase; font-weight: 500;
+    }
+    .hero-title { font-weight: 400; }
+    .hero-body-wrap { display: flex; gap: 14px; align-items: flex-start; }
+    .hero-body-line { width: 1px; height: 40px; background: var(--orange); flex-shrink: 0; margin-top: 4px; }
+    .hero-right { position: relative; }
+    .hero-right::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--orange); z-index: 2; }
+    .hero-num { position: absolute; bottom: 28px; right: 28px; z-index: 2; text-align: right; }
+    .hero-num p:first-child { font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: var(--orange); margin: 0; line-height: 1; }
+    .hero-num p:last-child { font-size: 0.55rem; color: rgba(255,255,255,.6); letter-spacing: .2em; text-transform: uppercase; margin: 4px 0 0; }
+    @media (max-width: 900px) { .hero-vertical { display: none; } .hero-num { display: none; } }
+</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10900640971"></script>
 <script>
@@ -242,11 +259,12 @@ function gtag_report_conversion(url) {
 
 <section class="hero">
   <div class="hero-left">
+    <span class="hero-vertical">Ambulancia ALS · Puerto Rico · Est. 2009</span>
     <p class="hero-eyebrow es">Servicios ALS · Puerto Rico</p>
     <p class="hero-eyebrow en">ALS Services · Puerto Rico</p>
     <h1 class="hero-title es">Capacidad.<br><em>Respuesta.</em><br>Confianza.</h1>
     <h1 class="hero-title en">Capacity.<br><em>Response.</em><br>Trust.</h1>
-    <p class="hero-body es">Ambulancia Privada ALS en Puerto Rico — emergencias médicas, traslados hospitalarios y servicios programados con ambulancias Tipo III y personal paramédico certificado.</p>
+    <div class="hero-body-wrap"><div class="hero-body-line"></div><p class="hero-body es" style="margin:0 0 48px">Emergencias médicas, traslados hospitalarios y servicios programados con unidades Tipo III y paramédicos certificados.</p></div>
     <p class="hero-body en">Private ALS Ambulance in Puerto Rico — medical emergencies, hospital transfers and scheduled services with Type III ambulances and certified paramedic staff.</p>
     <div class="hero-actions">
       <a href="tel:7872124700" onclick="return gtag_report_conversion('tel:7872124700')" class="btn-call es">Llamar · (787) 212-4700</a>
@@ -256,6 +274,7 @@ function gtag_report_conversion(url) {
     </div>
   </div>
   <div class="hero-right">
+    <div class="hero-num"><p>01</p><p>Servicios ALS</p></div>
     <img src="hero-opt.jpg" alt="Unidad de ambulancia ALS Type III Pro Health Ambulance Services en San Juan Puerto Rico con palmas y bahía de fondo" />
   </div>
 </section>
