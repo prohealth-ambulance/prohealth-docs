@@ -1,0 +1,8 @@
+with open('index.html','r',encoding='utf-8') as f: html=f.read()
+html = html.replace('.hero-title span.w1 { display:block; opacity:0; animation: slideL .8s .1s cubic-bezier(.16,1,.3,1) forwards; }', '.hero-title span.w1 { display:block; opacity:0; animation: slideL 1.6s .2s cubic-bezier(.22,1,.36,1) forwards; }')
+html = html.replace('.hero-title span.w2 { display:block; opacity:0; animation: slideR .8s .3s cubic-bezier(.16,1,.3,1) forwards; }', '.hero-title span.w2 { display:block; opacity:0; animation: slideR 1.6s .6s cubic-bezier(.22,1,.36,1) forwards; }')
+html = html.replace('.hero-title span.w3 { display:block; opacity:0; animation: slideL .8s .5s cubic-bezier(.16,1,.3,1) forwards; }', '.hero-title span.w3 { display:block; opacity:0; animation: slideL 1.6s 1s cubic-bezier(.22,1,.36,1) forwards; }')
+html = html.replace('@keyframes slideL { from { opacity:0; transform:translateX(-40px); } to { opacity:1; transform:none; } }', '@keyframes slideL { from { opacity:0; transform:translateX(-24px); } to { opacity:1; transform:none; } }')
+html = html.replace('@keyframes slideR { from { opacity:0; transform:translateX(40px); } to { opacity:1; transform:none; } }', '@keyframes slideR { from { opacity:0; transform:translateX(24px); } to { opacity:1; transform:none; } }')
+with open('index.html','w',encoding='utf-8') as f: f.write(html)
+print('Entrada suavizada')

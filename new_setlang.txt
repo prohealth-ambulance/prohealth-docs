@@ -1,0 +1,22 @@
+    // Form success message
+    const succ = document.getElementById('form-success');
+    if (succ) {
+      const esSpan = succ.querySelector('.es');
+      const enSpan = succ.querySelector('.en');
+      if (esSpan) esSpan.style.display = lang === 'es' ? 'block' : 'none';
+      if (enSpan) enSpan.style.display = lang === 'en' ? 'block' : 'none';
+    }
+    // Service select toggle
+    const selEs = document.querySelector('.svc-select-es');
+    const selEn = document.querySelector('.svc-select-en');
+    if (selEs && selEn) {
+      selEs.style.display = lang === 'es' ? 'block' : 'none';
+      selEn.style.display = lang === 'en' ? 'block' : 'none';
+      selEs.required = lang === 'es';
+      selEn.required = lang === 'en';
+    }
+    // reCAPTCHA note toggle
+    document.querySelectorAll('.recaptcha-note').forEach(el => {
+      el.style.display = el.classList.contains(lang) ? 'block' : 'none';
+    });
+  }

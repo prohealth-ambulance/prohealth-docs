@@ -1,0 +1,10 @@
+<select name="service" required>
+              <option value="" disabled selected></option>
+              <option value="emergencia">Emergencia médica / Medical emergency</option>
+              <option value="traslado">Traslado médico / Medical transport</option>
+              <option value="psiquiatrico">Transporte psiquiátrico / Psychiatric transport</option>
+              <option value="evento">Cobertura de evento / Event coverage</option>
+              <option value="signos">Evaluación de signos vitales / Vital signs</option>
+              <option value="room">Room to room</option>
+              <option value="otro">Otro / Other</option>
+            </select>

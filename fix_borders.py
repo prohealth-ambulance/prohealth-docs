@@ -1,0 +1,5 @@
+with open('index.html','r',encoding='utf-8') as f: html=f.read()
+html = html.replace('.service-item { padding: 40px 32px; border-right: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; background: #ffffff; }', '.service-item { padding: 40px 32px; border-bottom: 1px solid #e8e8e8; background: #ffffff; }')
+html = html.replace('    .service-item:nth-child(3n) { border-right: none; }\n', '')
+with open('index.html','w',encoding='utf-8') as f: f.write(html)
+print('Bordes corregidos')

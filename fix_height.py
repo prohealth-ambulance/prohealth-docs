@@ -1,0 +1,6 @@
+h=open('index.html',encoding='utf-8').read()
+c=h.count('100svh')
+print(f'encontrados: {c}')
+h=h.replace('100svh', 'auto')
+open('index.html','w',encoding='utf-8').write(h)
+print('prohealth ok')

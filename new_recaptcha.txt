@@ -1,0 +1,2 @@
+<p class="recaptcha-note es">Este sitio está protegido por reCAPTCHA · <a href="https://policies.google.com/privacy" target="_blank">Privacidad</a> · <a href="https://policies.google.com/terms" target="_blank">Términos</a></p>
+          <p class="recaptcha-note en" style="display:none">This site is protected by reCAPTCHA · <a href="https://policies.google.com/privacy" target="_blank">Privacy</a> · <a href="https://policies.google.com/terms" target="_blank">Terms</a></p>

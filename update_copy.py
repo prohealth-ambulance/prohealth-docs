@@ -1,0 +1,5 @@
+with open('index.html','r', encoding='utf-8') as f: html=f.read()
+html=html.replace('Confiable.<br><em>Eficiente.</em><br>Profesional.','Capacidad.<br><em>Respuesta.</em><br>Confianza.')
+html=html.replace('Reliable.<br><em>Efficient.</em><br>Professional.','Capacity.<br><em>Response.</em><br>Trust.')
+with open('index.html','w', encoding='utf-8') as f: f.write(html)
+print('Listo')

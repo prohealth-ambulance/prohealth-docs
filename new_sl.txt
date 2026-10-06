@@ -1,0 +1,3 @@
+  function setLang(lang, skipSave) {
+    document.body.className = 'lang-' + lang;
+    if (!skipSave) { try { localStorage.setItem('ph_lang', lang); } catch(e) {} }

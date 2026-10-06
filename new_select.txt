@@ -1,0 +1,20 @@
+<select name="service" required class="svc-select-es">
+              <option value="" disabled selected></option>
+              <option value="emergencia">Emergencia médica</option>
+              <option value="traslado">Traslado médico</option>
+              <option value="psiquiatrico">Transporte psiquiátrico</option>
+              <option value="evento">Cobertura de evento</option>
+              <option value="signos">Evaluación de signos vitales</option>
+              <option value="room">De cuarto a cuarto</option>
+              <option value="otro">Otro</option>
+            </select>
+            <select name="service_en" class="svc-select-en" style="display:none">
+              <option value="" disabled selected></option>
+              <option value="emergency">Medical emergency</option>
+              <option value="transport">Medical transport</option>
+              <option value="psychiatric">Psychiatric transport</option>
+              <option value="event">Event coverage</option>
+              <option value="vitals">Vital signs</option>
+              <option value="room2">Room to room</option>
+              <option value="other">Other</option>
+            </select>
